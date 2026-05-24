@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-decision-log"
+version = "0.1.0"
+description = "Structured decision log for AI agents. Capture why each branch in the reasoning was chosen, with context, options, rationale, and outcome. Composable sinks, replay, aggregate stats. Zero deps."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Mukunda Katta", email = "mukunda.vjcs6@gmail.com" },
+]
+keywords = ["llm", "agent", "decision-log", "governance", "audit", "replay", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/MukundaKatta/agent-decision-log"
+Repository = "https://github.com/MukundaKatta/agent-decision-log"
+Issues = "https://github.com/MukundaKatta/agent-decision-log/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
